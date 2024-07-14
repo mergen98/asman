@@ -1,0 +1,23 @@
+/* Appointment ---------------------------------- */
+.appointment-thumb {
+    overflow: hidden;
+    border-radius: 32px;
+    img {
+        width: 100%;
+    }
+}
+
+/* Appointment 2---------------------------------- */
+.appointment-wrap2 {
+    border-radius: 16px;
+    padding: 40px;
+    .form-title {
+        font-weight: 600;
+        font-family: $body-font;
+        margin-top: -0.3em;
+        margin-bottom: 26px;
+    }
+    @include vxs {
+        padding: 40px 30px;
+    }
+}

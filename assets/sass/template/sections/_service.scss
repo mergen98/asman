@@ -1,0 +1,277 @@
+/* Service Area 1 ---------------------------------- */
+.service-card {
+    .service-card-icon {
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        margin-top: 30px;
+        a {
+            color: $white-color;
+            font-size: 24px;
+            font-weight: 600;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+    .box-text {
+        color: $white-color;
+        opacity: 0.8;
+    }
+    &:hover {
+        .service-card-icon {
+            img {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+
+/* Service Area 2 ---------------------------------- */
+.service-card.style2 {
+    .service-card-icon {
+        width: 96px;
+        height: 96px;
+        line-height: 93px;
+        border-radius: 50%;
+        border: 1px solid $title-dark;
+        text-align: center;
+        transition: 0.4s;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        margin-top: 17px;
+        a {
+            color: $title-color;
+            font-size: 24px;
+            font-weight: 600;
+            &:hover {
+                color: $title-dark;
+            }
+        }
+    }
+    .box-text {
+        color: $body-color;
+        opacity: 0.8;
+    }
+    .service-img {
+        margin-top: 50px;
+        border-radius: 24px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 0.4s;
+        }
+    }
+    &:hover {
+        .img-shine:after {
+            animation: imgShine 1s;
+        }
+        .service-card-icon {
+            background: $title-dark;
+            img {
+                transform: rotateY(180deg);
+                filter: brightness(9);
+            }
+        }
+        .service-img {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+/* Service Area 3 ---------------------------------- */
+.service-slider3 {
+    .slider-pagination {
+        margin-top: 58px;
+        display: inline-flex;
+        width: auto;
+        bottom: var(--swiper-pagination-bottom, -6px);
+        @include md {
+            display: none;
+        }
+        .swiper-pagination-bullet {
+            --swiper-pagination-bullet-horizontal-gap: 0;
+            --swiper-pagination-bullet-size: 220px;
+            background: $theme-color;
+            height: 1px;
+            &.swiper-pagination-bullet-active {
+                ~ .swiper-pagination-bullet {
+                    background: #8EA3A9;
+                }
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            @include ml {
+                --swiper-pagination-bullet-size: 98px;
+            }
+            @include xl {
+                --swiper-pagination-bullet-size: 85px;
+            }
+            @include lg {
+                --swiper-pagination-bullet-size: 72px;
+            }
+        }
+    }
+}
+.service-card.style3 {
+    .service-card-icon {
+        width: 96px;
+        height: 96px;
+        line-height: 93px;
+        border-radius: 50%;
+        border: 1px solid $theme-color;
+        text-align: center;
+        transition: 0.4s;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        margin-top: 17px;
+        a {
+            color: $theme-color;
+            font-size: 24px;
+            font-weight: 600;
+            &:hover {
+                color: $title-color;
+            }
+        }
+    }
+    .box-text {
+        color: $theme-color;
+        opacity: 0.9;
+        @include xxl {
+            font-size: 14px;
+        }
+        @include xl {
+            font-size: 16px;
+        }
+        @include md {
+            font-size: 15px;
+        }
+        @include sm {
+            font-size: 16px;
+        }
+    }
+    .service-img {
+        margin-top: 50px;
+        border-radius: 24px;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        z-index: 1;
+        img {
+            width: 100%;
+            transition: 0.4s;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $theme-color;
+            opacity: 0;
+            transition: 0.4s;
+            z-index: 1;
+        }
+        .icon-btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 0;
+            background: transparent;
+            filter: invert(1);
+            transition: 0.4s;
+            opacity: 0;
+            z-index: 2;
+        }
+    }
+    &:hover {
+        .service-card-icon {
+            background: $theme-color;
+            img {
+                transform: rotateY(180deg);
+                filter: brightness(9);
+            }
+        }
+        .service-img {
+            img {
+                transform: scale(1.05);
+            }
+            &:before {
+                opacity: 0.7;
+            }
+            .icon-btn {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* Service Area 4 ---------------------------------- */
+.service-card.style4 {
+    .service-card-icon {
+        width: 96px;
+        height: 96px;
+        line-height: 93px;
+        border-radius: 50%;
+        border: 1px solid $light-color;
+        text-align: center;
+        transition: 0.4s;
+        img {
+            transition: 0.4s;
+            filter: brightness(9) contrast(0.4);
+        }
+    }
+    .box-title {
+        margin-top: 17px;
+        a {
+            color: $white-color;
+            font-size: 24px;
+            font-weight: 600;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+    .box-text {
+        color: $light-color;
+    }
+    .service-img {
+        margin-top: 50px;
+        border-radius: 24px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 0.4s;
+        }
+    }
+    &:hover {
+        .img-shine:after {
+            animation: imgShine 1s;
+        }
+        .service-card-icon {
+            background: $light-color;
+            img {
+                transform: rotateY(180deg);
+                filter: none;
+            }
+        }
+        .service-img {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

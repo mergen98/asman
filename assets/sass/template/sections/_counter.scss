@@ -1,0 +1,156 @@
+/* Counter 1 ---------------------------------- */
+.counter-area-1 {
+    padding-top: 165px;
+}
+.counter-card {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .divider {
+            width: 1px;
+            height: 75px;
+            border: 1px dashed rgba($color: #B7B7B7, $alpha: 0.5);
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
+    text-align: center;
+    .box-icon {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        position: relative;
+        text-align: center;
+        line-height: 90px;
+        z-index: 1;
+        margin: auto auto 30px;
+        img {
+            transition: 0.4s;
+        }
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            background: $theme-color;
+            z-index: -1;
+            opacity: 0.08;
+            transition: 0.4s;
+        }
+        &:before {
+            background: transparent;
+            opacity: 1;
+            border: 1px dashed $theme-color;
+            z-index: 1;
+        }
+    }
+    .box-number {
+        font-size: 40px;
+        color: $title-color;
+        font-weight: 600;
+        margin-bottom: 3px;
+        margin-top: -0.35em;
+        .counter-number {
+            color: $title-color;
+        }
+    }
+    .box-text {
+        font-size: 16px;
+        font-weight: 400;
+        color: $title-color;
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: rotateY(180deg);
+                filter: brightness(99);
+            }
+            &:after {
+                opacity: 1;
+            }
+            &:before {
+                animation: spin 10s infinite;
+                border: 1px dashed $white-color;
+            }
+        }
+    }
+}
+@include md {
+    .counter-card {
+        .box-number {
+            font-size: 36px;
+        }
+        .box-text {
+            font-size: 16px;
+        }
+    }
+}
+@include sm {
+    .counter-card {
+        &-wrap {
+            flex-wrap: wrap;
+            position: relative;
+            gap: 50px 0;
+            .divider {
+                display: none;
+            }
+        }
+        flex: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@include xs {
+    .counter-card {
+        flex: 100%;
+    }
+}
+@include vxs {
+    .counter-card .box-text {
+        font-size: 14px;
+    }
+}
+
+/* Counter 2 ---------------------------------- */
+.counter-area-2 {
+    padding-top: 126px;
+    margin-top: -126px;
+    z-index: -1;
+    @include xxl {
+        padding-top: 106px;
+        margin-top: -106px;
+    }
+    @include lg {
+        padding-top: 0;
+        margin-top: 0;
+        z-index: 1;
+    }
+}
+.counter-card.style2 {
+    .box-number {
+        font-size: 48px;
+        @include md {
+            font-size: 40px;
+        }
+    }
+}
+
+/* Counter 3 ---------------------------------- */
+.counter-card-wrap.style2 {
+    .counter-card .box-number {
+        margin-top: -0.3em;
+    }
+    @include lg {
+        flex-wrap: wrap;
+        gap: 50px 0;
+        .counter-card {
+            width: 33%;
+        }
+    }
+}

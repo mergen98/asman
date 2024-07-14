@@ -1,0 +1,101 @@
+/* Pricing Card ---------------------------------- */
+.price-card {
+    position: relative;
+    z-index: 2;
+    border-radius: 16px;
+    background: transparent;
+    border: 1px solid $theme-color;
+    padding: 32px;
+    .price-card-icon {
+        width: 72px;
+        height: 72px;
+        line-height: 70px;
+        text-align: center;
+        border-radius: 50%;
+        background: $theme-color;
+        margin-bottom: 24px;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .price-card-title {
+        padding-bottom: 35px;
+        margin-bottom: 30px;
+        margin-top: -0.25em;
+        font-size: 24px;
+        font-weight: 600;
+        color: $theme-color;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -32px;
+            right: -32px;
+            background: $theme-color;
+            height: 1px;
+        }
+    }
+    .price-card_price {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 0px;
+        color: $theme-color;
+        .duration {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $body-font;
+            color: $theme-color;
+        }
+    }
+    .price-card_text {
+        color: $theme-color;
+        letter-spacing: -0.05px;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .price-card_content {
+        .checklist {
+            margin-top: 46px;
+            li {
+                font-weight: 400;
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                i {
+                    font-size: 24px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+    .th-btn {
+        margin-top: 40px;
+        font-size: 18px;
+        padding: 21px 20px;
+    }
+    .offer-tag {
+        position: absolute;
+        right: 0;
+        top: 50px;
+        background: $theme-color2;
+        font-size: 18px;
+        color: $title-color;
+        padding: 5px 15px 5px 22px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10px 50%);
+        opacity: 0;
+    }
+    &.active {
+        .offer-tag {
+            opacity: 1;
+        }
+    }
+    &:hover {
+        .price-card-icon {
+            img {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}

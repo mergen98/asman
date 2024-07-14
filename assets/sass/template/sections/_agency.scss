@@ -1,0 +1,121 @@
+/* Agency 1 ---------------------------------- */
+.agency-card {
+    .agency-card-img {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $theme-color;
+            opacity: 0.2;
+        }
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .agency-card-brand {
+            position: absolute;
+            backdrop-filter: blur(5px);
+            border-radius: 16px;
+            background: rgba(28, 45, 55, 0.8);
+            top: 16px;
+            left: 16px;
+            padding: 16px;
+            z-index: 1;
+            max-width: 106px;
+            img {
+                height: auto;
+                width: auto;
+            }
+        }
+    }
+    .agency-card-details {
+        margin-top: 18px;
+    }
+    .agency-card-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: $theme-color;
+        margin-bottom: 0;
+    }
+    .agency-card-text {
+        font-size: 16px;
+        color: $theme-color;
+        margin-bottom: 3px;
+        i {
+            margin-right: 8px;
+        }
+        strong {
+            font-weight: 500;
+        }
+    }
+    .agency-card-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 22px;
+        gap: 10px;
+        .btn-wrap {
+            flex: none;
+        }
+        @include ml {
+            display: block;
+            .btn-wrap {
+                margin-top: 20px;
+            }
+        }
+    }
+    &.style-flex {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        .agency-card-img {
+            flex: none;
+        }
+        .agency-card-title {
+            margin-bottom: 10px;
+        }
+        .agency-card-details {
+            flex: auto;
+        }
+        @include ml {
+            display: block;
+
+        }
+    }
+}
+
+.agency-page-img {
+    position: relative;
+    margin-bottom: 36px;
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $theme-color;
+        opacity: 0.2;
+        border-radius: 16px;
+    }
+    .thumb {
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        img {
+            min-height: 300px;
+            object-fit: cover;
+        }
+    }
+    .agency-card-brand {
+        position: absolute;
+        left: 16px;
+        bottom: -36px;        
+        background: rgba($color: #1C2D37, $alpha: 0.8);
+        backdrop-filter: blur(5px);
+        border-radius: 16px;
+        padding: 17px;
+        max-width: 107px;
+        z-index: 1;
+    }
+}

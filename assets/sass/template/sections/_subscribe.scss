@@ -1,0 +1,23 @@
+/* Subscribe Area ---------------------------------- */
+.subscribe-area-2 {
+    padding: 200px 0;
+    background-attachment: fixed;
+    @include sm {
+        padding: 120px 0;
+    }
+}
+.subscribe-form.style2 {
+    display: flex;
+    gap: 16px;
+    .form-group {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .th-btn {
+        flex: none;
+    }
+    @include xs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

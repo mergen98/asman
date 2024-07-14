@@ -1,0 +1,157 @@
+/* Why Choose Us Area ---------------------------------- */
+.why-sec-1 {
+    background-size: auto;
+    background-position: right top;
+}
+.why-img-box {
+    position: relative;
+    padding-bottom: 20px;
+    .img1 {
+        img {
+            width: 100%;
+        }
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+        width: 250px;
+        height: 250px;
+        background: $theme-color;
+        z-index: -1;
+    }
+    .about-grid {
+        position: absolute;
+        z-index: 1;
+        right: 25px;
+        bottom: 100px;
+        text-align: center;
+        padding: 30px;
+        max-width: 275px;
+        .about-grid_thumb {
+            margin-bottom: 15px;
+        }
+        .about-grid_text {
+            color: $white-color;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: $title-font;
+            margin-bottom: -0.4em;
+            line-height: 30px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $theme-color2;
+            opacity: 0.6;
+            z-index: -1;
+        }
+    }
+}
+.why-feature-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    .why-feature-list-wrap {
+        display: flex;
+        gap: 15px;
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+        .icon {
+            flex: none;
+            font-size: 20px;
+            color: $theme-color;
+        }
+        .feature-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: -0.1em;
+            margin-bottom: 7px;
+        }
+        .feature-text {
+            margin-bottom: -0.5em;
+        }
+    }
+}
+@include ml {
+    .why-feature-wrap {
+        margin-right: 50px;
+    }
+}
+@include xl {
+    .why-feature-wrap {
+        margin-right: 0;
+    }
+}
+@include lg {
+    .why-feature-wrap {
+        --section-space: 50px;
+        --section-space-mobile: 50px;
+    }
+}
+@include xs {
+    .why-img-box .about-grid {
+        bottom: 60px;
+        padding: 25px;
+        max-width: 240px;
+    }
+    .why-img-box .about-grid .about-grid_text {
+        font-size: 18px;
+    }
+}
+/* Why Choose Us Area 2---------------------------------- */
+.why-feature-list-wrap.style2 {
+    gap: 20px;
+    .icon {
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+        border-radius: 50%;
+        background: $theme-color;
+        text-align: center;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .feature-title {
+        font-size: 24px;
+        color: $white-color;
+    }
+    .feature-text {
+        color: $white-color;
+        max-width: 402px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &:hover {
+        .icon {
+            img {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+@include lg {
+    .why-feature-list-wrap.style2 .feature-title {
+        font-size: 22px;
+    }
+}
+@include xs {
+    .why-feature-list-wrap.style2 {
+        display: block;
+        .icon {
+            margin-bottom: 20px;
+        }
+    }
+}
+/* Why Choose Us Area 3---------------------------------- */
+.why-wrap3 {
+    margin-right: 40px;
+    @include lg {
+        margin-right: 0;
+    }
+}

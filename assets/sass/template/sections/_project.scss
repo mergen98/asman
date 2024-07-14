@@ -1,0 +1,327 @@
+/* Portfolio Area -------------------------------*/
+.project-area-1 {
+    background-attachment: fixed;
+}
+.project-wrap1 {
+    position: relative;
+    left: calc((100% - var(--main-container)) / 2);
+    @include xl {
+        left: calc((100% - 1140px) / 2);
+    }
+    @include lg {
+        left: calc((100% - 960px) / 2);
+    }
+    @include md {
+        left: calc((100% - 720px) / 2);
+    }
+    @include sm {
+        left: auto;
+    }
+    .project-title-wrap1 {
+        margin-right: 100px;
+        @include xxl {
+            margin-right: 0;
+        }
+    }
+    .project-number-pagination {
+        position: absolute;
+        z-index: 9;
+        left: -80px;
+        top: 50%;
+        transform: translate(-100%, calc(-50% + 40px));
+        display: inline-block;
+        @include xxl {
+            display: none;
+        }
+        .tab-btn {
+            position: relative;
+            margin: 110px 0;
+            cursor: pointer;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                height: 155px;
+                width: 1px;
+                background: rgba($color: #ffffff, $alpha: 0.2);
+                top: 0px;
+                left: 50%;
+            }
+            &:before {
+                height: 7px;
+                width: 7px;
+                border-radius: 50%;
+                transform: translate(-50%, 0px);
+                background: #D9D9D9;
+            }
+            &:nth-child(4) {
+                margin-bottom: 0;
+                &:after {
+                    display: none;
+                }
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+            span {
+                display: block;
+                color: $title-color;
+                height: 45px;
+                width: 45px;
+                line-height: 45px;                
+                background-color: $white-color;
+                border-radius: 50%;
+                font-size: 24px;
+                font-weight: 600;
+                text-align: center;
+                opacity: 0;
+                position: relative;
+                transition: 0.4s;
+                transform: translate(0, -50%);
+                &:after {
+                    content: '';
+                    position: absolute;
+                    inset: -17px;
+                    background: rgba($color: #ffffff, $alpha: 0.2);
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
+            &.active {
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.project-slider1 {
+    @include xxl {
+        margin-right: -200px;
+    }
+    @include sm {
+        margin-right: 0;
+    }
+    .slider-pagination {
+        text-align: start;
+        width: 340px;
+        .swiper-pagination-bullet {
+            background: $white-color;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:hover,
+            &.swiper-pagination-bullet-active {
+                background-color: $theme-color2;
+            }
+        }
+    }
+}
+.portfolio-card {
+    position: relative;
+    width: 100%;
+    .portfolio-img {
+        z-index: 2;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+        img {
+            transition: 0.4s;
+            width: 100%;
+        }
+        .portfolio-card-shape {
+            background: rgba(28, 45, 55, 0.7);
+            backdrop-filter: blur(2.5px);
+            padding: 25px 50px;
+            position: absolute;
+            inset: 20px;
+            transition: 0.4s;
+            opacity: 0;
+        }
+    }
+    .icon-btn {
+        --btn-size: 56px;
+        line-height: 54px;
+        background: $theme-color2;
+        border-color: $theme-color2;
+        font-size: 18px;
+        position: absolute;
+        right: 50%;
+        top: 0;
+        transform: translate(50%, -50%);
+        img {
+            width: 22px;
+            transition: 0.4s;
+        }
+        &:hover {
+            background: $theme-color;
+            border-color: $theme-color;
+            color: $white-color;
+            img {
+                filter: brightness(0) grayscale(9) invert(2);
+            }
+        }
+    }
+    .portfolio-content {
+        background-color: transparent;
+        z-index: 3;
+        transition: 0.4s ease-in-out;
+        position: relative;
+        padding-top: 22px;
+        @include xs {
+            padding-top: 28px;
+        }
+    }
+    
+    &:hover {
+        .portfolio-img {
+            &:after {
+                animation: imgShine 1s;
+            }
+            .portfolio-card-shape {
+                opacity: 1;
+            }
+        }
+        .portfolio-content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+/* Portfolio Area 2-------------------------------*/
+.project-bg-shape2-1 {
+    @include xxl {
+        display: none;
+    }
+}
+.project-slider2 {
+    position: relative;
+    left: calc((100% - var(--main-container)) / 2);
+    .slider-arrow {
+        --pos-x: -30px;
+        top: calc(50% - 71px);
+    }
+    @include xl {
+        left: 0;
+        padding: 0 40px;
+        .slider-arrow {
+            display: none;
+        }
+    }
+    @include xs {
+        padding: 0 15px;
+    }
+}
+.portfolio-card.style2 {
+    .portfolio-img {
+        border-radius: 32px;
+        .portfolio-card-shape {
+            inset: 0;
+            background: rgba(54, 68, 64, 0.8);
+            border: 1px solid $white-color;
+            border-radius: 32px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 421px;
+                transform: scale(1.1);
+            }
+        }
+    }
+    .portfolio-title {
+        margin-bottom: 18px;
+        a {
+            font-size: 32px;
+            font-weight: 500;
+            color: $white-color;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+    .portfolio-text {
+        color: $white-color;
+        margin-bottom: -0.25em;
+    }
+    &:hover {
+        .portfolio-img {
+            img {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+/* Portfolio Area 3-------------------------------*/
+.portfolio-card.style3 {
+    .portfolio-img {
+        border-radius: 24px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $theme-color;
+            opacity: 0.2;
+            transition: 0.4s;
+        }
+        .icon-btn {
+            position: absolute;
+            left: 50%;
+            right: auto;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
+            width: auto;
+            height: auto;
+            line-height: normal;
+            border: 0;
+            text-align: center;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: $white-color;
+            transition: 0.4s;
+            opacity: 0;
+            .icon {
+                margin-bottom: 24px;
+                img {   
+                    filter: brightness(0) grayscale(9) invert(2);
+                    width: 32px;
+                }
+            }
+        }
+    }
+    .portfolio-title {
+        margin-bottom: 8px;
+        a {
+            font-size: 24px;
+            font-weight: 600;
+            color: $theme-color;
+            &:hover {
+                color: $title-color;
+            }
+        }
+    }
+    .portfolio-text {
+        color: $title-color;
+        margin-bottom: -0.25em;
+    }
+    .portfolio-content {
+        padding-top: 15px;
+    }
+    &:hover {
+        .portfolio-img {
+            &:before {
+                opacity: 0.7;
+            }
+            .icon-btn {
+                opacity: 1;
+            }
+        }
+    }
+}

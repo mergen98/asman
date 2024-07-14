@@ -1,0 +1,137 @@
+/* Video Area 1 -------------------------------*/
+.video-area-1 {
+    margin-bottom: -450px;
+    z-index: 1;
+    position: relative;
+}
+.video-wrap1 {
+    display: flex;
+    flex-direction: row-reverse;
+    @include md {
+        display: block;
+    }
+}
+.video-wrap-details {
+    background: $smoke-color;
+    padding: 60px 125px 64px 64px;
+    border-radius: 20px 0 0px 20px;
+    width: 50%;
+    .sec-title {
+        text-transform: capitalize;
+    }
+    @include xl {
+        padding: 60px 64px 64px 64px;
+    }
+    @include lg {
+        padding: 50px 54px 54px 54px;
+    }
+    @include md {
+        width: 100%;
+        border-radius: 20px 0 20px 20px;
+    }
+    @include xs {
+        padding: 40px 30px 30px 30px;
+    }
+}
+.video-box1 {
+    position: relative;
+    width: 50%;
+    img {
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+    }
+    .play-btn {
+        position: absolute;
+        bottom: 56px;
+        right: 56px;
+    }
+    @include md {
+        width: 100%;
+        border-radius: 30px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}
+/* Video Box2 -------------------------------*/
+.video-box2 {
+    position: relative;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Video Box2 -------------------------------*/
+.video-area-2 {
+    position: relative;
+    z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(137.41deg, rgba(28, 45, 55, 0) 31.44%, rgba(28, 45, 55, 0.5) 82.72%);
+        z-index: -1;
+    }
+}
+.video-wrap2 {
+    .video-title {
+        font-size: 72px;
+        font-weight: 600;
+        margin-bottom: 350px;
+        line-height: 1.111;
+        margin-top: -0.25em;
+        @include xxl {
+            font-size: 60px;
+        }
+        @include xl {
+            font-size: 54px;
+        }
+        @include lg {
+            font-size: 45px;
+        }
+        @include md {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        @include xs {
+            font-size: 34px;
+        }
+    }
+    .video-btn {
+        display: flex;
+        gap: 42px;
+        align-items: center;
+        justify-content: end;
+        margin-left: auto;
+        font-size: 24px;
+        font-weight: 400;
+        color: $white-color;
+        @include md {
+            justify-content: center;
+            color: $title-color;
+            gap: 25px;
+            font-size: 20px;
+            .play-btn.style5 {
+                &:before,
+                &:after {
+                    border-color: $theme-color;
+                }
+                > i {
+                    background: $theme-color;
+                    color: $white-color;
+                    --icon-size: 70px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

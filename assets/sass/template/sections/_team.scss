@@ -1,0 +1,594 @@
+/* Team global ---------------------------------- */
+.th-team {
+    position: relative;
+    .team-img {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+    .team-desig {
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+        margin-bottom: -0.45em;
+        transition: 0.4s ease-in-out;
+        color: $theme-color;
+    }
+    .th-social {
+        transition: 0.4s ease-in-out;
+        a {
+            --icon-size: 40px;
+            background-color: $white-color;
+            color: $theme-color;
+            &:hover {
+                background-color: $theme-color;
+                color: $white-color;
+            }
+        }
+    }
+    .box-title {
+        margin-bottom: 0;
+    }
+}
+/* Team Area 1 ---------------------------------- */
+.team-area-1 {
+    padding-top: calc(450px + 120px);
+    @include md {
+        padding-top: calc(450px + 80px);
+    }
+}
+.team-slider1 {
+    text-align: center;
+    margin-bottom: -8px;
+    @include md {
+        margin-bottom: 0;
+    }
+    .slider-pagination {
+        margin-top: 80px;
+        display: inline-flex;
+        width: auto;
+        @include md {
+            display: none;
+        }
+        .swiper-pagination-bullet {
+            --swiper-pagination-bullet-horizontal-gap: 0;
+            --swiper-pagination-bullet-size: 200px;
+            background: $white-color;
+            height: 1px;
+            &.swiper-pagination-bullet-active {
+                ~ .swiper-pagination-bullet {
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            @include ml {
+                --swiper-pagination-bullet-size: 195px;
+            }
+            @include xl {
+                --swiper-pagination-bullet-size: 170px;
+            }
+            @include lg {
+                --swiper-pagination-bullet-size: 145px;
+            }
+        }
+    }
+    .slider-arrow {
+        top: auto;
+        bottom: 7px;
+        left: 0;
+        background: transparent;
+        width: auto;
+        height: auto;
+        line-height: normal;
+        filter: brightness(0) invert(1);
+        &.slider-next {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+
+/* Team Card ---------------------------------- */
+.team-card {
+    position: relative;
+    .team-img {
+        img {
+            height: 442px;
+            object-fit: cover;
+        }
+    }
+    .team-card-content {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        right: 24px;
+        top: 325px;
+        background: rgba(28, 45, 55, 0.7);
+        backdrop-filter: blur(5px);
+        border-radius: 0px;
+        padding: 18px 25px;
+        transition: 0.4s;
+        mask-image: url(../img/theme-img/team-shape1-2.png);
+        mask-size: 100% 100%;
+        display: flex;
+        flex-wrap: wrap;
+        @include xs {
+            padding: 18px 20px;
+        }
+        .media {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: auto;
+            width: 100%;
+            text-align: start;
+            .media-body {
+                flex: none;
+            }
+        }
+        .icon-btn {
+            border: 0;
+            background: $theme-color2;
+            &:hover {
+                background: $white-color;
+            }
+        }
+        @include xs {
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            top: 338px;
+        }
+    }
+    .box-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        a {
+            color: $white-color;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+    .team-desig {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: $body-font;
+        margin-bottom: -0.4em;
+        display: block;
+        color: $white-color;
+    }
+    .th-social {
+        z-index: 1;
+        border-radius: 0;
+        transition: 0.4s;
+        margin-top: auto;
+        opacity: 0;
+        visibility: hidden;
+        a {
+            display: block;
+            text-align: center;
+            padding: 0;
+            color: $white-color;
+            border: 1px solid rgba(189, 189, 189, 0.5);
+            margin: 0;
+            background: transparent;
+            --icon-size: 32px;
+            &:hover {
+                color: $title-color;
+                background: $white-color;
+            }
+        }
+    }
+    &:hover {
+        .team-card-content {
+            top: 24px;
+            mask-image: url(../img/theme-img/team-shape1.png);
+            padding: 24px 25px;
+            @include xs {
+                top: 15px;
+                padding: 20px;
+            }
+        }
+        .th-social {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+/* Team Card 2---------------------------------- */
+.team-slider2 {
+    .slider-arrow {
+        --pos-x: -25px;
+    }
+}
+.team-card.style2 {
+    padding: 0;
+    background: transparent;
+    border-radius: 24px;
+    overflow: hidden;
+    .img-wrap {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(54, 68, 64, 0.7);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: 0.4s;
+        }        
+    }
+    .team-img {
+        img {
+            height: auto;
+        }
+    }
+    .team-card-content {
+        background: $gray-color;
+        padding: 24px;
+        transition: 0.4s;
+        position: initial;
+        mask-image: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .box-title {
+        margin-bottom: 1px;
+        a {
+            color: $title-dark;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .team-desig {
+        color: $title-dark;
+    }
+    .icon-btn {
+        background: $title-dark;
+        color: $white-color;
+        img {
+            filter: invert(1);
+            transition: 0.4s;
+        }
+        &:hover {
+            background: $theme-color2;
+            color: $title-color;
+            img {
+                filter: none;
+            }
+        }
+    }
+    .th-social-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        transition: 0.4s;
+        .icon-btn {
+            background: transparent;
+            border: 0;
+            margin-top: 15px;
+            font-size: 30px;
+            img {
+                width: 30px;
+            }
+            &:hover {
+                transform: scale(1.1);
+                img {
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+    .th-social {
+        background: transparent;
+        position: initial;
+        padding: 0;
+        display: inline-flex;
+        gap: 15px;
+        width: auto;
+        a {
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            background: transparent;
+            border: 1px solid rgba($color: #BDBDBD, $alpha: 0.5);
+            font-size: 16px;
+            &:hover {
+                background: $white-color;
+                color: $theme-color;
+            }
+        }
+    }
+    &:hover {
+        .img-wrap {
+            &:after {
+                opacity: 1;
+            }
+        }
+        .th-social-wrap {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+/* Team Card 3---------------------------------- */
+.team-slider3 {
+    --pos-x: -38px;
+}
+.team-card.style3 {
+    padding: 0;
+    background: transparent;
+    border-radius: 24px;
+    overflow: hidden;
+    .img-wrap {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(28, 45, 55, 0.7);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: 0.4s;
+        }        
+    }
+    .team-img {
+        img {
+            height: auto;
+        }
+    }
+    .team-card-content {
+        background: $light-color;
+        padding: 24px;
+        transition: 0.4s;
+        position: initial;
+        mask-image: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .box-title {
+        margin-bottom: 1px;
+        a {
+            color: $theme-color;
+            &:hover {
+                color: $title-color;
+            }
+        }
+    }
+    .team-desig {
+        color: $theme-color;
+    }
+    .icon-btn {
+        background: $theme-color;
+        color: $white-color;
+        img {
+            filter: invert(1);
+            transition: 0.4s;
+        }
+        &:hover {
+            background: $theme-color2;
+            color: $title-color;
+            img {
+                filter: none;
+            }
+        }
+    }
+    .th-social-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        transition: 0.4s;
+        .icon-btn {
+            background: transparent;
+            border: 0;
+            margin-top: 15px;
+            font-size: 30px;
+            img {
+                width: 30px;
+            }
+            &:hover {
+                transform: scale(1.1);
+                img {
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+    .th-social {
+        background: transparent;
+        position: initial;
+        padding: 0;
+        display: inline-flex;
+        gap: 15px;
+        width: auto;
+        a {
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            background: transparent;
+            border: 1px solid rgba($color: #BDBDBD, $alpha: 0.5);
+            font-size: 16px;
+            &:hover {
+                background: $white-color;
+                color: $theme-color;
+            }
+        }
+    }
+    &:hover {
+        .img-wrap {
+            &:after {
+                opacity: 1;
+            }
+        }
+        .th-social-wrap {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+/* Team Card 4---------------------------------- */
+.team-card.style4 {
+    padding: 0;
+    background: transparent;
+    border-radius: 24px;
+    overflow: hidden;
+    .img-wrap {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(28, 45, 55, 0.7);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: 0.4s;
+        }        
+    }
+    .team-img {
+        img {
+            height: auto;
+        }
+    }
+    .team-card-content {
+        background: $theme-color;
+        padding: 24px;
+        transition: 0.4s;
+        position: initial;
+        mask-image: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .box-title {
+        margin-bottom: 1px;
+        a {
+            color: $white-color;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+    .team-desig {
+        color: $white-color;
+    }
+    .icon-btn {
+        background: $light-color;
+        color: $theme-color;
+        img {
+            filter: none;
+            transition: 0.4s;
+        }
+        &:hover {
+            background: $theme-color2;
+            color: $title-color;
+        }
+    }
+    .th-social-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        transition: 0.4s;
+        .icon-btn {
+            background: transparent;
+            border: 0;
+            margin-top: 15px;
+            font-size: 30px;
+            img {
+                width: 30px;
+                filter: invert(1);
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    .th-social {
+        background: transparent;
+        position: initial;
+        padding: 0;
+        display: inline-flex;
+        gap: 15px;
+        width: auto;
+        a {
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            background: transparent;
+            border: 1px solid rgba($color: #BDBDBD, $alpha: 0.5);
+            font-size: 16px;
+            &:hover {
+                background: $white-color;
+                color: $theme-color;
+            }
+        }
+    }
+    &:hover {
+        .img-wrap {
+            &:after {
+                opacity: 1;
+            }
+        }
+        .th-social-wrap {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+/* Team Details ---------------------------------- */
+.about-card_title {
+    font-size: 32px;
+    font-weight: 600;
+    @include sm {
+        font-size: 30px;
+    }
+    @include xs {
+        font-size: 24px;
+    }
+}
+.team-about-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        font-size: 16px;
+        color: $theme-color;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        strong {
+            font-weight: 600;
+            min-width: 120px;
+            display: inline-block;
+        }
+    }
+}

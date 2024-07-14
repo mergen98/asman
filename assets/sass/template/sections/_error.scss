@@ -1,0 +1,73 @@
+.error-area-1 {
+	padding: 225px 0;
+	@include md {
+		padding: 80px 0;
+	}
+}
+.error-img {
+	text-align: center;
+	position: absolute;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@include md {
+		display: none;
+	}
+}
+.error-content {
+	max-width: 553px;
+	@include md {
+		text-align: center;
+		max-width: none;
+	}
+}
+.error-title {
+    margin-bottom: 30px;
+	font-size: 80px;
+	font-weight: 600;
+	color: $theme-color;
+	@include md {
+		font-size: 60px;
+		margin-top: -0.3em;
+	}
+}
+.error-subtitle {
+	font-size: 32px;
+	font-weight: 600;
+	color: $theme-color;
+	@include xs {
+		font-size: 24px;
+	}
+}
+.error-text {
+    margin-bottom: 72px;
+	font-size: 18px;
+	color: $theme-color;
+	margin-left: auto;
+	margin-right: auto;
+	@include xs {
+		font-size: 16px;
+	}
+}
+
+@include md {
+	.error-title {
+		margin-bottom: 15px;
+	}
+	.error-text {
+		margin-bottom: 25px;
+	}
+}
+
+@include sm {
+	.error-title {
+		margin-bottom: 10px;
+	}
+}

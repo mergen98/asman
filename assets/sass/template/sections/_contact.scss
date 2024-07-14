@@ -1,0 +1,195 @@
+
+/* Contact ---------------------------------- */ 
+.location-map {
+    position: relative;
+    .location-map-address {
+        border-radius: 10px;
+        background: $theme-color;
+        overflow: hidden;
+        display: inline-flex;
+        padding: 16px;
+        gap: 14px;
+        max-width: 252px;
+        position: absolute;
+        right: 95px;
+        bottom: 50px;
+        @include vxs {
+            right: 15px;
+        }
+        .thumb {
+            width: 67px;
+            height: 64px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid $gray-color;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .title {
+            color: $white-color;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 0;
+            font-family: $body-font;
+        }
+        .text {
+            font-size: 14px;
+            font-weight: 400;
+            color: $gray-color;
+            margin-bottom: 8px;
+            font-family: $body-font;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.contact-map {
+    line-height: 0px;
+    max-width: 1920px;
+    margin: 0 auto;
+    iframe {
+        width: 100%;
+        height: 377px;
+        border-radius: 10px;
+        @include lg {
+            height: 400px;
+        }
+        @include md {
+            height: 350px;
+        }
+    }
+    &.style2 {
+        max-width: none;
+        width: 100%;
+        iframe {
+            height: 450px;
+            border-radius: 0;
+            @include lg {
+                height: 400px;
+            }
+            @include md {
+                height: 350px;
+            }
+        }
+    }
+}
+
+/* Contact Area 1---------------------------------- */ 
+.contact-bg-shape1-1 {
+    @include xxl {
+        display: none;
+    }
+}
+.about-contact-grid {
+    display: flex;
+    gap: 16px;
+    border: 1px solid #97AE97;
+    border-radius: 16px;
+    padding: 24px 24px 18px;
+    transition: 0.4s;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .about-contact-icon {
+        flex: none;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: $title-dark;
+        border-radius: 50%;
+        color: $white-color;
+        img {
+            filter: invert(1) contrast(9);
+        }
+    }
+    .about-contact-details-title {
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: -0.3em;
+        margin-bottom: 8px;
+    }
+    .about-contact-details-text {
+        margin-bottom: 0;
+    }
+    &:hover {
+        box-shadow: 0px 15px 30px rgba(176, 198, 176, 0.5);
+        border-color: transparent;
+    }
+}
+.contact-sec-map {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    .contact-map {
+        height: 100%;
+        iframe {
+            height: 100%;
+            border-radius: 0;
+        }
+    }
+    .location-map-address {
+        background: $title-dark;
+        right: 15%;
+        bottom: 30%;
+    }
+    @include md {
+        position: relative;
+        top: auto;
+        bottom: -80px;
+        width: 100%;
+        .contact-map iframe {
+            height: 350px;
+        }
+    }
+}
+
+/* Contact Page 1---------------------------------- */ 
+.about-contact-grid.style2 {
+    background: $theme-color;
+    border-radius: 8px;
+    .about-contact-icon {
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        background: transparent;
+        border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+        line-height: 70px;
+        font-size: 32px;
+        color: $white-color;
+        transition: 0.4s;
+        @include vxs {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+        }
+    }
+    .about-contact-details-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: $white-color;
+    }
+    .about-contact-details-text {
+        color: $light-color;
+        a {
+            color: $light-color;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+    &:hover {
+        .about-contact-icon {
+            background: $light-color;
+            border-color: $light-color;
+            color: $theme-color;
+        }
+    }
+}

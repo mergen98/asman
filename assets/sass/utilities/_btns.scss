@@ -1,0 +1,675 @@
+// Primary Button
+.th-btn {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-flex;
+    border: none;
+    text-align: center;
+    background-color: $theme-color;
+    color: $white-color;
+    font-family: $body-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 18.5px 24px;
+    min-width: 125px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    i {
+        transition: 0.4s all;
+        position: relative;
+        color: $white-color;
+    }
+    .btn-icon {
+        filter: invert(1);
+    }
+    &.th-btn-icon {        
+        &:after {
+            content: '';
+            position: relative;
+            background-image: url(../img/icon/arrow-right.svg);
+            background-size: 100% 100%;
+            width: 16px;
+            height: 16px;
+            transition: 0.4s;
+        }
+    } 
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        background-image: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%
+        );
+        top: 0;
+        left: -100px;
+        opacity: 0.3;
+    }
+    &:focus,
+    &:hover,
+    &.active {
+        color: $white-color;
+        box-shadow: none;
+        &:before {
+            animation: shine 1.5s ease-out infinite;
+        }
+    }
+    &.btn-mask {
+        border-radius: 0;
+        mask-image: url(../img/theme-img/btn-shape.png);
+        mask-size: 100% 100%;
+        background: $theme-color2;
+        color: $title-color;
+        transition: 1s ease;
+        padding: 20px 24px;
+        &:hover,
+        &:active,
+        &:focus {
+            border-radius: 50px;
+        }
+        .th-btn-icon {
+            filter: none;
+            color: $title-color;
+            img {
+                width: 16px;
+            }
+        } 
+        .btn-icon {
+            filter: none;
+        }
+    }
+    &.btn-mask2 {
+        border-radius: 0;
+        background-image: url(../img/theme-img/btn-shape2.png);
+        background-size: 100% 100%;
+        background-color: transparent;
+        color: $white-color;
+        transition: 1s ease;
+        padding: 20px 24px;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(1) invert(1);
+            }
+            img {
+                width: 16px;
+            }
+        } 
+        &:hover,
+        &:active,
+        &:focus {
+            border-radius: 50px;
+            background: $white-color;
+            color: $title-color;
+            &:after {
+                filter: none;
+            }
+        }
+    }
+    &.style2 {
+        background: $title-color;
+        color: $white-color;
+        padding: 21px 32px;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(1) invert(1);
+                color: var(--white-color);
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+    &.style3 {
+        background: $title-dark;
+        color: $white-color;
+        padding: 21px 32px;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(1) invert(1);
+                color: var(--white-color);
+                width: 22px;
+                height: 22px;
+            }
+        }
+        .btn-icon {
+            filter: brightness(1) invert(1);
+        }
+    }
+    &.style4 {
+        background-color: $theme-color2;
+        color: $white-color;
+        &:hover {
+            color: $white-color;
+            &:before,
+            &:after {
+                background-color: $title-color;
+            }
+        }
+    }
+    &.style5 {
+        background-color: $theme-color;
+        color: $white-color;
+        &:hover {
+            color: $theme-color;
+            &:before,
+            &:after {
+                background-color: $white-color;
+            }
+        }
+    } 
+    &.style6 {
+        background-color: $title-color;
+        &:hover {
+            color: $theme-color;
+            &:before,
+            &:after {
+                background-color: $white-color;
+            }
+        }
+    } 
+    &.style7 {
+        background-color: $white-color;
+        color: $title-color;
+        &:hover {
+            color: $white-color;
+            &:before,
+            &:after {
+                background-color: $title-color;
+            }
+        }
+    } 
+    &.style-border {
+        border: 1px solid $white-color;
+        padding: 16px 24px;
+        background: transparent;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(0) grayscale(9) invert(2);
+                color: $white-color;
+                width: 22px;
+                height: 22px;
+            }
+        } 
+        &:before {
+            background-image: linear-gradient(
+                120deg,
+                rgba(108, 108, 108, 0) 30%,
+                rgba(108, 108, 108, 0.5),
+                rgba(108, 108, 108, 0) 70%
+            );
+        }
+        .btn-icon {
+            filter: invert(1);
+            transition: 0.4s;
+        }
+        &:hover {
+            background: $white-color;
+            color: $title-color;
+            &.th-btn-icon {
+                &:after {
+                    filter: none;
+                    color: $title-color;
+                }
+            }
+            .btn-icon {
+                filter: none;
+            } 
+        }
+    }
+    &.style-border2 {
+        border: 1px solid $theme-color;
+        padding: 16px 30px;
+        color: $theme-color;
+        background: transparent;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(4);
+                color: $theme-color;
+                width: 22px;
+                height: 22px;
+            }
+        }
+        .btn-icon {
+            transition: 0.4s;
+            color: $theme-color;
+            filter: none;
+        }
+        &:hover {
+            background: $theme-color;
+            color: $white-color;
+            &.th-btn-icon {
+                &:after {
+                    filter: brightness(0) grayscale(9) invert(2);
+                    color: $white-color;
+                }
+            }
+            .btn-icon {
+                color: $white-color;
+                filter: brightness(0) grayscale(9) invert(2);
+            }
+        }
+    }
+    &.style-border3 {
+        border: 1px solid $white-color;
+        padding: 20px 32px;
+        background: transparent;
+        &.th-btn-icon {
+            &:after {
+                filter: brightness(0) grayscale(9) invert(2);
+                color: $white-color;
+                width: 22px;
+                height: 22px;
+            }
+        } 
+        &:before {
+            background-image: linear-gradient(
+                120deg,
+                rgba(108, 108, 108, 0) 30%,
+                rgba(108, 108, 108, 0.5),
+                rgba(108, 108, 108, 0) 70%
+            );
+        }
+        .btn-icon {
+            filter: invert(1);
+            transition: 0.4s;
+        }
+        &:hover {
+            background: $white-color;
+            color: $title-color;
+            &.th-btn-icon {
+                &:after {
+                    filter: none;
+                    color: $title-color;
+                }
+            }
+            .btn-icon {
+                filter: none;
+            } 
+        }
+    }
+    &.style-white {
+        background: $white-color;
+        color: $theme-color;
+        &:hover {
+            background: $theme-color2;
+        }
+    }
+    &.style-white2 {
+        background: $white-color;
+        color: $theme-color;
+        padding: 21px 32px;
+        &.th-btn-icon {
+            &:after {
+                width: 22px;
+                height: 22px;
+            }
+        } 
+        &:hover {
+            background: $theme-color2;
+        }
+    }
+    &.btn-fw {
+        width: 100%;
+        &:before,
+        &:after {
+            display: none;
+        }
+        &:hover {
+            background: $white-color;
+            color: $title-color;
+        }
+    }
+    &.btn-sm {
+        padding: 16px 25px;
+        min-width: 152px;
+    }
+    &.circle-btn {
+        height: 200px;
+        width: 200px;
+        border: 1px solid rgba(196, 207, 222, 0.28);
+        border-radius: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        background: transparent;
+        font-size: 14px;
+        font-weight: 700;
+        .circle-btn-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            i {
+                color: $theme-color;
+                transform: rotate(45deg);
+                font-size: 24px;
+            }
+            span {
+                margin-top: 10px;
+                line-height: 1.857;
+                width: 100%;
+            }
+        }
+    }
+}
+@keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+}
+@keyframes btn-icon-anim {
+    0% {
+        top: 0;
+        right: 2px;
+    }
+    25% {
+        top: -10px;
+        right: -10px;
+    }
+    50% {
+        top: 10px;
+        opacity: 0;
+        right: 17px;
+    }
+    100% {
+        top: 0;
+        right: 2px;
+        opacity: 1;
+    }
+}
+// Icon Btn
+.icon-btn {
+    display: inline-block;
+    width: var(--btn-size, 40px);
+    height: var(--btn-size, 40px);
+    line-height: var(--btn-size, 40px);
+    font-size: var(--btn-font-size, 18px);
+    background-color: transparent;
+    color: $title-color;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    transition: 0.4s ease-in-out;
+    position: relative;
+
+    &:hover {
+        background-color: $theme-color;
+        color: $white-color;
+        border-color: $theme-color;
+    }
+    &.style2 {
+        background-color: $theme-color;
+        color: $white-color;
+        border: none;
+        border-radius: 99px;
+        &:hover {
+            background-color: $theme-color2;
+        }
+    }
+}
+
+// Play Button
+.play-btn {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    > i {
+        display: inline-block;
+        width: var(--icon-size, 56px);
+        height: var(--icon-size, 56px);
+        line-height: var(--icon-size, 56px);
+        text-align: center;
+        background-color: $white-color;
+        color: $theme-color;
+        font-size: var(--icon-font-size, 1.4em);
+        border-radius: 50%;
+        z-index: 1;
+        transition: all ease 0.4s;
+    }
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.17);
+        @extend .ripple-animation;
+        z-index: -1;
+        border-radius: 50%;
+        transition: all ease 0.4s;
+    }
+
+    &:after {
+        animation-delay: 2s;
+    }
+
+    &:hover {
+        &:after,
+        &::before,
+        i {
+            background-color: $theme-color2;
+        }
+    }
+    &.style2 {
+        > i {
+            background: rgba(255, 255, 255, 0.2);
+            color: $white-color;
+            font-size: 32px;
+        }
+        &:before,
+        &:after {
+            background-color: transparent;
+            border: 1px solid $white-color;
+        }
+    }
+    &.style3 {
+        > i {
+            --icon-size: 74px;
+            font-size: 24px;
+            background: rgba(255, 255, 255, 0.2);
+            color: $white-color;
+        }
+        &:before,
+        &:after {
+            background-color: rgba(28, 45, 55, 0.7);
+        }
+        &:hover {
+            > i {
+                background-color: $white-color;
+                color: $theme-color;
+            }
+            &:before,
+            &:after {
+                background-color: $white-color;
+            }
+        }
+    }
+    &.style4 {
+        > i {
+            --icon-size: 80px;
+            font-size: 22px;
+            background-color: rgba(28, 45, 55, 0.5);
+            color: $white-color;
+        }
+        &:before,
+        &:after {
+            background: transparent;
+            border: 1px solid $white-color;
+        }
+        &:hover {
+            > i {
+                background-color: $white-color;
+                color: $theme-color;
+            }
+        }
+    }
+    &.style5 {
+        > i {
+            --icon-size: 116px;
+            font-size: 22px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: $white-color;
+        }
+        &:before,
+        &:after {
+            background: transparent;
+            border: 1px solid $white-color;
+        }
+        &:hover {
+            > i {
+                background-color: $white-color;
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+// Video Button
+.video-text-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    --icon-size: 27px;
+    --icon-font-size: 8px;
+    .play-btn > i {
+        color: $white-color;
+        background: $theme-color;
+    }
+    .play-btn {
+        &:before,
+        &:after {
+            border: 1px solid $theme-color;
+            background: transparent;
+        }
+    }
+    .btn-title {
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+// Link Button
+.link-btn {
+    font-weight: 700;
+    font-size: 14px;
+    font-family: $title-font;
+    display: inline-flex;
+    line-height: 0.8;
+    position: relative;
+    padding-bottom: 2px;
+    margin-bottom: -2px;
+    text-transform: uppercase;
+    color: $title-color;
+    .icon {
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        margin-left: 8px;
+    }
+    i {
+        position: relative;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        width: 0;
+        height: 1px;
+        background-color: $theme-color;
+        transition: all ease 0.4s;
+    }
+    &:hover,
+    &.active {
+        color: $theme-color;
+        &::before {
+            width: 100%;
+        }
+    }
+    &.style2 {
+        color: $theme-color;
+        &::before {
+            width: 100%;            
+        }
+        &:hover {
+            &:before {
+                width: 50%;
+            }
+        }
+    }
+}
+// Scroll To Top
+.scroll-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    z-index: 10000;
+    opacity: 1;
+    visibility: hidden;
+    transform: translateY(45px);
+    transition: all 300ms linear;
+    &:after {
+        content: "\f062";
+        font-family: $icon-font;
+        position: absolute;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        color: $theme-color;
+        left: 0;
+        top: 0;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        display: block;
+        z-index: 1;
+        border: 2px solid $theme-color;
+        box-shadow: none;
+        border-radius: 50%;
+    }
+    svg {
+        color: $theme-color;
+        border-radius: 50%;
+        background: $white-color;
+        path {
+            fill: none;
+        }
+    }
+    .progress-circle path {
+        stroke: $theme-color;
+        stroke-width: 20px;
+        box-sizing: border-box;
+        transition: all 400ms linear;
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}

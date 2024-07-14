@@ -1,0 +1,54 @@
+/* Skill Area ---------------------------------- */
+.skill-feature {
+    background: $black-color3;
+    border-radius: 10px;
+    padding: 30px;
+    .skill-feature-icon {
+        height: 60px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .skill-feature-logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+    &_title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: -0.2em;
+        font-family: $title-font;
+        color: $title-color;
+        @include xl {
+            font-size: 20px;
+        }
+    }
+    .progress {
+        position: relative;
+        height: 6px;
+        background-color: rgba($color: #ffffff, $alpha: 0.25);
+        overflow: visible;
+        border-radius: 10px;
+    }
+    .progress-bar {
+        background-color: $theme-color;
+        height: 6px;
+        border-radius: inherit;
+        overflow: visible;
+        position: relative;
+        border: 0;
+        border-radius: 10px;
+    }
+    .progress-value {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: $title-font;
+        color: $white-color;
+        text-align: end;
+        margin-top: 10px;
+        margin-bottom: 9px;
+    }
+}

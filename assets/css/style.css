@@ -22916,8 +22916,8 @@ span.select2-selection.select2-selection--single:focus {
 .whatsapp-btn {
     background-color: #25D366;
     color: white;
-    font-size: 24px;
-    padding: 10px;
+    font-size: 32px; /* Increase the font size to 32px or adjust as needed */
+    padding: 15px; /* Adjust padding for better icon size */
     border-radius: 50%;
     text-align: center;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);

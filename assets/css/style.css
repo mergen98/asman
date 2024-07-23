@@ -111,8 +111,8 @@ Version: 1.0.0
   --icon-font: "Font Awesome 6 Pro";
   --main-container: 1296px;
   --container-gutters: 24px;
-  --section-space: 130px;
-  --section-space-mobile: 130px;
+  --section-space: 180px;
+  --section-space-mobile: 180px;
   --section-title-space: 60px;
   --ripple-ani-duration: 5s;
   --th-body-background: #ffffff;

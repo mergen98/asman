@@ -22941,11 +22941,11 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 #about-sec:target {
-  padding-top: 500px;
+  padding-top: 180px !important;
 }
 
 #services:target {
-  padding-top: 500px;
+  padding-top: 180px !important;
 }
 
 

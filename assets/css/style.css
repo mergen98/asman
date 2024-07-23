@@ -22940,5 +22940,13 @@ span.select2-selection.select2-selection--single:focus {
     display: inline; /* Show text on hover */
 }
 
+#about-sec:target {
+  padding-top: 180px;
+}
+
+#services:target {
+  padding-top: 180px;
+}
+
 
 /*# sourceMappingURL=style.css.map */

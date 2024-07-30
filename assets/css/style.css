@@ -111,8 +111,8 @@ Version: 1.0.0
   --icon-font: "Font Awesome 6 Pro";
   --main-container: 1296px;
   --container-gutters: 24px;
-  --section-space: 180px;
-  --section-space-mobile: 180px;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
   --section-title-space: 60px;
   --ripple-ani-duration: 5s;
   --th-body-background: #ffffff;
@@ -306,7 +306,7 @@ h6 {
 
 .h1,
 h1 {
-  font-size: 80px;
+  font-size: 60px;
   line-height: 1.18;
   /* Medium Large devices */
 }
@@ -10335,7 +10335,7 @@ ul.comment-list .th-comment-item:first-child > .th-post-comment {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 90px;
+  gap: 70px;
 }
 
 .hero-social-link .social-wrap a {
@@ -22938,14 +22938,6 @@ span.select2-selection.select2-selection--single:focus {
 
 .whatsapp-btn-container:hover span {
     display: inline; /* Show text on hover */
-}
-
-#about-sec:target {
-  padding-top: 180px !important;
-}
-
-#services:target {
-  padding-top: 180px !important;
 }
 
 
